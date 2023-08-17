@@ -1,0 +1,51 @@
+print('Bem-vindo a Sorveteria da Micaela Milman')
+print('-'*36, 'CARDÁPIO', '-'*36) #Menú de cardápio pro cliente escolher
+print('| Nº DE BOLAS | SABOR TRADICINAL (tr) | SABOR PREMIUM (pr) | SABOR ESPECIAL (es) |')
+print('|      1      |         R$6,00        |        R$7,00      |         R$8,00      |')
+print('|      2      |         R$11,00       |        R$13,00     |         R$15,00     |')
+print('|      3      |         R$15,00       |        R$18,00     |         R$21,00     |')
+print('-'*82)
+valor = 0
+while True:
+    sabor = str(input('Digite o sabor desejado [tr/pr/es]: ')).strip().lower()
+    if sabor !='tr' and sabor !='pr' and sabor !='es': #se a pessoa não escolher um sabor válido:
+        print('Sabor inválido. Tente novamente.') #mensagem de erro
+        continue
+    bolas = int(input('Quantas bolas deseja?[1/2/3]: '))
+    if bolas !=1 and bolas !=2 and bolas !=3: #se a pessoa não escolher uma quant de bolas válida
+        print('Quantidade de bolas de sorvete incorreta. Tente novamente.') #mensagem de erro
+        continue
+    if sabor == 'tr': #se a pessoa escolher sabor tradicional
+        if bolas == 1: #se escolher só 1 bola
+            print(f'Você escolheu 1 bola do sabor Tradicional. O valor é R${6}.')
+            valor += 6
+        elif bolas == 2: #se a pessoa escolher 2 bolas
+            print(f'Você escolheu 2 bolas do sabor Tradcional. O valor é R${11}.')
+            valor +=11
+        else:
+            bolas == 3 #se a pessoa escolhe 3 bolas
+            print(f'Você escolheu 3 bolas do sabor Tradicional. O valor é R${15}.')
+            valor += 15
+    if sabor == 'pr': #se a pessoa escolheu o sabor premium
+         if bolas == 1: #se a pessoa escolheu só 1 bola
+            print(f'Você escolheu 1 bola do sabor Premium. O valor é R${7}.')
+            valor +=7
+         elif bolas == 2: #se a pessoa escolher 2 bolas
+            print(f'Você escolheu 2 bolas do sabor Tradcional. O valor é R${13}.')
+            valor += 13
+         else:
+            bolas == 3  # se a pessoa escolheu 3 bolas
+            print(f'Você escolheu 3 bolas do sabor Premium. O valor é R${18}.')
+            valor += 18
+    if sabor == 'es': #se a pessoa escolheu sabor premium
+        if bolas == 1:  # se a pessoa escolheu só 1 bola
+            print(f'Você escolheu 1 bola do sabor Especial. O valor é R${8}.')
+            valor += 8
+        elif bolas == 2: # se a pessoa escolheu 2 bolas
+            print(f'Você escolheu 2 bolas do sabor Especial. O valor é R${15}.')
+            valor += 15
+        else:
+            bolas == 3 # se a pessoa escolheu 3 bolas
+            print(f'Você escolheu 3 bolas do sabor Especial. O valor é R${21}.')
+            valor += 21
+novo = str(int('Deseja mais algum sorvete? [S/N]: ')).strip().upper()[0]
