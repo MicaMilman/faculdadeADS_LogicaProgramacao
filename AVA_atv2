@@ -55,4 +55,3 @@ while True:
     elif novo == 'N': #se o cliente marcar não, laço interrompe
         print(f'O valor final da sua compra é R${valor}\nObrigada e volte sempre!')
         break
-
