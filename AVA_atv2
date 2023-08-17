@@ -49,8 +49,10 @@ while True:
             print(f'Você escolheu 3 bolas do sabor Especial. O valor é R${21}.')
             valor += 21
     novo = input('Deseja mais algum sorvete? [S/N]: ').strip() #se a pessoa quiser comprar mais sorvete
-    if novo == 'Ss': #se o cliente marcar sim, o laço reinicia
+    novo = novo.upper()
+    if novo == 'S': #se o cliente marcar sim, o laço reinicia
         continue
-    elif novo == 'Nn': #se o cliente marcar não, laço interrompe
+    elif novo == 'N': #se o cliente marcar não, laço interrompe
         print(f'O valor final da sua compra é R${valor}\nObrigada e volte sempre!')
         break
+
