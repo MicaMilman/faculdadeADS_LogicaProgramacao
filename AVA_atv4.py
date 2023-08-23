@@ -56,7 +56,6 @@ def consultar_colaboradores():  #consulta de colaborador
         else:  #erro que volta pro inicio do laço
             print('Opção inválida. Tente novamente')
             continue
-
 def remover_colaboradores():  #função remover colaborador
     print('Você escolheu remover colaborador: ')
     id = int(input('Entre com o ID do colaborador que deseja remover: '))
@@ -65,7 +64,7 @@ def remover_colaboradores():  #função remover colaborador
             lista_colaboradores.remove(colaborador)
             print('Colaborador REMOVIDO com sucesso!')
 
-#------ programa principal -------
+#programa principal:
 
 while True:  #menu principal
     print('Cadastro, consulta ou remoção de colaborador')
@@ -84,7 +83,7 @@ while True:  #menu principal
     elif menu == '3':
         remover_colaboradores()
     elif menu == '4':
-        print('-'*10) ('Programa finalizado') ('-'*10)
+        print('Programa finalizado')
         break
     else:
         print('Opção inválida. Tente novamente')
